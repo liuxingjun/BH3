@@ -1,0 +1,110 @@
+[
+  {
+    "theme": "圣诞小屋",
+    "name": "圣诞壁炉",
+    "type":"窗户",
+    "star":4,
+    "comfort": 50
+  },
+  {
+    "theme": "圣诞小屋",
+    "name": "圣诞地板",
+    "type":"地板",
+    "star":3,
+    "comfort": 55
+  },
+  {
+    "theme": "圣诞小屋",
+    "name": "圣诞墙纸",
+    "type":"墙纸",
+    "star":4,
+    "comfort": 44
+  },
+  {
+    "theme": "圣诞小屋",
+    "name": "圣诞花环",
+    "type":"墙饰",
+    "star":3,
+    "comfort": 9
+  },
+  {
+    "theme": "圣诞小屋",
+    "name": "圣诞快乐壁画",
+    "type":"墙贴",
+    "star":3,
+    "comfort": 13
+  },
+  {
+    "theme": "圣诞小屋",
+    "name": "圣诞麋鹿雕像",
+    "type":"墙饰",
+    "star":3,
+    "comfort": 10
+  },
+  {
+    "theme": "圣诞小屋",
+    "name": "圣诞装饰树",
+    "type":"小件",
+    "star":4,
+    "comfort": 19
+  },
+  {
+    "theme": "圣诞小屋",
+    "name": "圣诞礼盒塔",
+    "type":"小件",
+    "star":4,
+    "comfort": 14
+  },
+  {
+    "theme": "圣诞小屋",
+    "name": "圣诞吓人箱",
+    "type":"小件",
+    "star":4,
+    "comfort": 15
+  },
+  {
+    "theme": "圣诞小屋",
+    "name": "圣诞雪人",
+    "type":"装饰",
+    "star":3,
+    "comfort": 9
+  },
+  {
+    "theme": "圣诞小屋",
+    "name": "圣诞姜饼人",
+    "type":"装饰",
+    "star":3,
+    "comfort": 10
+  },
+  {
+    "theme": "圣诞小屋",
+    "name": "圣诞吼姆Ⅱ号",
+    "type":"装饰",
+    "star":3,
+    "comfort": 10
+  },
+  {
+    "theme": "圣诞小屋",
+    "name": "圣诞雪橇",
+    "type":"电器",
+    "star":4,
+    "comfort": 41
+  },
+  {
+    "theme": "圣诞小屋",
+    "name": "圣诞雪花地毯",
+    "type":"地毯",
+    "star":3,
+    "comfort": 16
+  },
+
+
+
+  {
+    "theme": "圣诞小屋",
+    "name": "圣诞大床",
+    "type":"大件",
+    "star":4,
+    "comfort": 43
+  }
+]
