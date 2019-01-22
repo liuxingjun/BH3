@@ -7,6 +7,8 @@
         <el-table-column prop="difficulty" label="难度" :filters="difficultyFilters"  :filter-multiple=false  :filter-method="filterHandler"  ></el-table-column>
         <el-table-column prop="material" label="通用进化材料" :filters="materialFilters" :filter-multiple=false :filter-method="filterHandler"></el-table-column>
         <el-table-column prop="fragment" label="碎片" :filters="fragmentFilters" :filter-method="filterHandler" :filter-multiple=false ></el-table-column>
+        
+        <el-table-column prop="power" label="战力" sortable></el-table-column>
         <el-table-column prop="vitality" label="体力" sortable></el-table-column>
       </el-table>
     </div>
