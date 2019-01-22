@@ -3,7 +3,7 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 
 module.exports = {
   // publicPath:'./',
-  assetsPublicPath:"/bh3",
+  assetsDir:"./bh3",
   configureWebpack: {
     optimization: {
       minimizer: [
