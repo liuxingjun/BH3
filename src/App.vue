@@ -1,7 +1,9 @@
 <template>
   <div id="app">
     <div id="nav">
+      
       <router-link to="/">Home</router-link> |
+      <router-link to="/level">关卡</router-link> |
       <router-link to="/furniture">家园家具</router-link>
     </div>
     <router-view/>

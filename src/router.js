@@ -16,6 +16,12 @@ export default new Router({
       name: "furniture",
       component: () =>
         import(/* webpackChunkName: "furniture" */ "./views/furniture.vue")
+    },
+    {
+      path: "/level",
+      name: "level",
+      component: () =>
+        import(/* webpackChunkName: "furniture" */ "./views/level.vue")
     }
   ]
 });
