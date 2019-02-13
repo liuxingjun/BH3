@@ -3,7 +3,7 @@
     <div>
       <el-table ref="filterTable" :data="tableData" :default-sort = "{prop: 'comfort', order: 'descending'}" >
         <el-table-column type="index" width="50"></el-table-column>
-        <el-table-column prop="theme" label="主题"></el-table-column>
+        <el-table-column prop="theme" label="主题" :filters="themeFilters" :filter-multiple=false :filter-method="filterHandler"></el-table-column>
         <el-table-column prop="name" label="名称"></el-table-column>
         <el-table-column prop="type" label="类别" :filters="typeFilters" :filter-multiple=false :filter-method="filterHandler"></el-table-column>
         <el-table-column prop="comfort" label="舒适度" sortable></el-table-column>
@@ -21,7 +21,8 @@ export default {
   data() {
     return {
       tableData: tableData,
-      typeFilters: []
+      typeFilters: [],
+      themeFilters:[],
     };
   },
   methods: {
@@ -32,16 +33,16 @@ export default {
   },
   mounted() {
     const collection = collect(this.tableData);
-
-    
-    console.log(collection);
-    const plucked = collection.pluck("type").unique();
-    plucked.each(item => {
-      let filter = { text: item, value: item };
-      this.typeFilters.push(filter);
+    let typeFilters=collect();
+    let themeFilters=collect();
+    collection.each(item => {
+      let typeFilter = { text: item.type, value: item.type };
+      typeFilters.push(typeFilter);
+      let themeFilter = { text: item.theme, value: item.theme };
+      themeFilters.push(themeFilter);
     });
-    console.log(filter);
-    console.log(this.typeFilters);
+    this.themeFilters = themeFilters.unique('value').all();
+    this.typeFilters = typeFilters.unique('value').all();
   }
 };
 </script>

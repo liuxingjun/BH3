@@ -5,7 +5,7 @@
         <el-table-column type="index"></el-table-column>
         <el-table-column prop="name" label="关卡"></el-table-column>
         <el-table-column prop="difficulty" label="难度" :filters="difficultyFilters"  :filter-multiple=false  :filter-method="filterHandler"  ></el-table-column>
-        <el-table-column prop="material" label="通用进化材料" :filters="materialFilters" :filter-multiple=false :filter-method="filterHandler"></el-table-column>
+        <el-table-column prop="material" label="通用进化材料" :filters="materialFilters" :filter-multiple=true :filter-method="filterHandler"></el-table-column>
         <el-table-column prop="fragment" label="碎片" :filters="fragmentFilters" :filter-method="filterHandler" :filter-multiple=false ></el-table-column>
         
         <el-table-column prop="power" label="战力" sortable></el-table-column>
@@ -41,20 +41,16 @@ export default {
   },
   mounted() {
     const collection = collect(this.tableData);
-    
-    console.log(collection);
-    const material = collection.pluck("material").unique();
-    material.each(item => {
-      let filter = { text: item, value: item };
-      this.materialFilters.push(filter);
+    let materialFilters=collect();
+    let fragmentFilters=collect();
+    collection.each(item => {
+      let materialFilter = { text: item.material, value: item.material };
+      materialFilters.push(materialFilter);
+      let fragmentFilter = { text: item.fragment, value: item.fragment };
+      fragmentFilters.push(fragmentFilter);
     });
-     const fragment = collection.pluck("fragment").unique();
-    fragment.each(item => {
-      let filter = { text: item, value: item };
-      this.fragmentFilters.push(filter);
-    });
-    console.log(filter);
-    console.log(this.typeFilters);
+    this.materialFilters = materialFilters.unique('value').all();
+    this.fragmentFilters = fragmentFilters.unique('value').all();
   }
 };
 </script>
